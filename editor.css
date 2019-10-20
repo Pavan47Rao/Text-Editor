@@ -1,0 +1,22 @@
+.text-container {
+    background-color: gainsboro;
+    width:400px;
+    height: 600px;
+    margin: 100px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-italic {
+    font-style: italic;   
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.align-justify-btn {
+    text-align: center;
+}
