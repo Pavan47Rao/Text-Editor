@@ -49,35 +49,47 @@ underlineBtn.addEventListener('click',underlineClickListener);
 let alignCenterBtn = document.getElementById('align-center-btn');
 let alignCenterClickListener = (event) => {
     event.preventDefault();
-    let selection = window.getSelection();
-    let final = `<span class="text-align-center">${selection.toString()}</span>`;
-    if(selection.anchorNode.parentElement.classList.contains("text-align-center"))
-    selection.anchorNode.parentElement.classList.remove("text-align-center");
-    else
-    document.getSelection().anchorNode.parentElement.innerHTML = document.getSelection().anchorNode.parentElement.innerHTML.replace(document.getSelection().toString(),final);
+    let classList = document.getElementById('container').classList;
+    if(classList.contains("text-align-center") || classList.contains("text-align-left") || classList.contains("text-align-right")) {
+        let classes = Array.from(document.getElementById('container').classList);
+        let existingModifier = classes.filter(className => { return className.match(/^text-/) });
+        document.getElementById('container').classList.remove(existingModifier);
+        document.getElementById('container').classList.add("text-align-center");
+    }
+    else {
+        document.getElementById('container').classList.add("text-align-center");
+    }    
 };
 alignCenterBtn.addEventListener('click',alignCenterClickListener);
 
 let alignLeftBtn = document.getElementById('align-left-btn');
 let alignLeftClickListener = (event) => {
     event.preventDefault();
-    let selection = window.getSelection();
-    let final = `<span class="text-align-left">${selection.toString()}</span>`;
-    if(selection.anchorNode.parentElement.classList.contains("text-align-left"))
-    selection.anchorNode.parentElement.classList.remove("text-align-left");
-    else
-    document.getSelection().anchorNode.parentElement.innerHTML = document.getSelection().anchorNode.parentElement.innerHTML.replace(document.getSelection().toString(),final);
+    let classList = document.getElementById('container').classList;
+    if(classList.contains("text-align-center") || classList.contains("text-align-left") || classList.contains("text-align-right")) {
+        let classes = Array.from(document.getElementById('container').classList);
+        let existingModifier = classes.filter(className => { return className.match(/^text-/) });
+        document.getElementById('container').classList.remove(existingModifier);
+        document.getElementById('container').classList.add("text-align-left");
+    }
+    else {
+        document.getElementById('container').classList.add("text-align-left");
+    }    
 };
 alignLeftBtn.addEventListener('click',alignLeftClickListener);
 
 let alignRightBtn = document.getElementById('align-right-btn');
 let alignRightClickListener = (event) => {
     event.preventDefault();
-    let selection = window.getSelection();
-    let final = `<span class="text-align-right">${selection.toString()}</span>`;
-    if(selection.anchorNode.parentElement.classList.contains("text-align-right"))
-    selection.anchorNode.parentElement.classList.remove("text-align-right");
-    else
-    document.getSelection().anchorNode.parentElement.innerHTML = document.getSelection().anchorNode.parentElement.innerHTML.replace(document.getSelection().toString(),final);
+    let classList = document.getElementById('container').classList;
+    if(classList.contains("text-align-center") || classList.contains("text-align-left") || classList.contains("text-align-right")) {
+        let classes = Array.from(document.getElementById('container').classList);
+        let existingModifier = classes.filter(className => { return className.match(/^text-/) });
+        document.getElementById('container').classList.remove(existingModifier);
+        document.getElementById('container').classList.add("text-align-right");
+    }
+    else {
+        document.getElementById('container').classList.add("text-align-right");
+    }    
 };
 alignRightBtn.addEventListener('click',alignRightClickListener);
