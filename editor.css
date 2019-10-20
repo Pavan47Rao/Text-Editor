@@ -1,8 +1,8 @@
 .container-box {
     background-color: gainsboro;
-    width:400px;
+    width: 1350px;
     height: 600px;
-    margin: 100px;
+    margin: 30px;
 }
 
 .text-bold {
@@ -27,4 +27,15 @@
 
 .text-align-right {
     text-align: right;
+}
+
+.icon {
+    color: black;
+    font-size: 40px !important;
+    padding: 5px;
+}
+
+.buttons {
+    padding-top: 3%;
+    padding-left: 40%;
 }
