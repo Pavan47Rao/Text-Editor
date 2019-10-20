@@ -45,3 +45,39 @@ let underlineClickListener = (event) => {
     document.getSelection().anchorNode.parentElement.innerHTML = document.getSelection().anchorNode.parentElement.innerHTML.replace(document.getSelection().toString(),final);
 };
 underlineBtn.addEventListener('click',underlineClickListener);
+
+let alignCenterBtn = document.getElementById('align-center-btn');
+let alignCenterClickListener = (event) => {
+    event.preventDefault();
+    let selection = window.getSelection();
+    let final = `<span class="text-align-center">${selection.toString()}</span>`;
+    if(selection.anchorNode.parentElement.classList.contains("text-align-center"))
+    selection.anchorNode.parentElement.classList.remove("text-align-center");
+    else
+    document.getSelection().anchorNode.parentElement.innerHTML = document.getSelection().anchorNode.parentElement.innerHTML.replace(document.getSelection().toString(),final);
+};
+alignCenterBtn.addEventListener('click',alignCenterClickListener);
+
+let alignLeftBtn = document.getElementById('align-left-btn');
+let alignLeftClickListener = (event) => {
+    event.preventDefault();
+    let selection = window.getSelection();
+    let final = `<span class="text-align-left">${selection.toString()}</span>`;
+    if(selection.anchorNode.parentElement.classList.contains("text-align-left"))
+    selection.anchorNode.parentElement.classList.remove("text-align-left");
+    else
+    document.getSelection().anchorNode.parentElement.innerHTML = document.getSelection().anchorNode.parentElement.innerHTML.replace(document.getSelection().toString(),final);
+};
+alignLeftBtn.addEventListener('click',alignLeftClickListener);
+
+let alignRightBtn = document.getElementById('align-right-btn');
+let alignRightClickListener = (event) => {
+    event.preventDefault();
+    let selection = window.getSelection();
+    let final = `<span class="text-align-right">${selection.toString()}</span>`;
+    if(selection.anchorNode.parentElement.classList.contains("text-align-right"))
+    selection.anchorNode.parentElement.classList.remove("text-align-right");
+    else
+    document.getSelection().anchorNode.parentElement.innerHTML = document.getSelection().anchorNode.parentElement.innerHTML.replace(document.getSelection().toString(),final);
+};
+alignRightBtn.addEventListener('click',alignRightClickListener);
