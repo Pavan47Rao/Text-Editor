@@ -1,11 +1,13 @@
 <html>
     <head>
         <link rel="stylesheet" href="editor.css">
+        <!-- External link to use the material icons -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
 
     <body>
         <div class="text-editor">TEXT EDITOR</div>
+        <!-- List of options available for text editor -->
         <div class="buttons">
             <span id="bold-btn">
                 <a href=""><i class="material-icons icon">format_bold</i></a>
@@ -31,8 +33,11 @@
                 <a href=""><i class="material-icons icon">format_underlined</i></a>
             </span>  
         </div>                      
-                                        
+         
+        <!-- Editable text box -->
         <div class="container-box" id="container" contenteditable="true"></div>
+
+        <!-- Import of external js -->
         <script src="editor.js"></script>
     </body>
 </html>
