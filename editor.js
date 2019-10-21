@@ -48,7 +48,7 @@ let underlineClickListener = (event) => {
     event.preventDefault();
     let selection = window.getSelection();
     let range = window.getSelection().getRangeAt(0);
-    if(!selection.anchorNode.parentElement.classList.contains("text-italic")) {
+    if(!selection.anchorNode.parentElement.classList.contains("text-underline")) {
         let selectionContents = range.extractContents();
         let span = document.createElement("span");
         span.className = "text-underline";
@@ -56,7 +56,7 @@ let underlineClickListener = (event) => {
         range.insertNode(span);
     }
     else {
-        selection.anchorNode.parentElement.classList.remove("text-italic");
+        selection.anchorNode.parentElement.classList.remove("text-underline");
     }
 };
 underlineBtn.addEventListener('click',underlineClickListener);
