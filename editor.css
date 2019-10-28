@@ -35,6 +35,10 @@
     padding: 5px;
 }
 
+.active {
+    color: black;
+}
+
 .buttons {
     padding-top: 2%;
     padding-left: 40%;
